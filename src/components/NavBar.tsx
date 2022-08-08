@@ -28,10 +28,10 @@ const Navbar = () => {
         <li>Blog</li>
         <li>Download</li>
       </ul>
-      <div className="button-div">
+      {/* <div className="button-div">
         <Button label={"login"} color={"white"} />
         <Button label={"sign up"} color={"white"} />
-      </div>
+      </div> */}
     </StyledNav>
   );
 };
