@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "karla";
+  font-family: "Manrope", sans-serif;
 }
 
 :root {
   --blue: #ff4484;
+  --bgcolor: #0a2640;
 }
 
 button {
@@ -17,6 +18,6 @@ button {
   max-width: 1440px;
 }
 
-ul{
+ul {
   list-style-type: none;
 }

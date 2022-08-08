@@ -44,6 +44,7 @@ const StyledNav = styled.nav`
   position: relative;
   padding: 1rem;
   color: white;
+  width: 100%;
 
   .logo_div {
     display: flex;
