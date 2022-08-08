@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "karla";
+}
+
+:root {
+  --blue: #ff4484;
+}
+
+button {
+  border: none;
+  background: none;
+}
+.container {
+  max-width: 1440px;
+}
+
+ul{
+  list-style-type: none;
+}
