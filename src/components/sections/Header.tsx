@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import NavBar from "./NavBar";
-import backImg from "../images/ellipse.png";
-import Button from "./Button";
+import backImg from "../../images/ellipse.png";
+import backImg1 from "../../images/ellipsedown.png";
+import Button from "../elements/Button";
 
 const Header = () => {
   return (
@@ -21,18 +22,18 @@ const Header = () => {
         <img
           className="header_image1"
           alt="header_image1"
-          src={require("../images/headerimage1.png")}
+          src={require("../../images/headerimage1.png")}
         />
         <div className="header_image-bottom">
           <img
             className="header_image2"
             alt="header_image2"
-            src={require("../images/headerimage2.png")}
+            src={require("../../images/headerimage2.png")}
           />
           <img
             className="header_image3"
             alt="header_image3"
-            src={require("../images/headerimage3.png")}
+            src={require("../../images/headerimage3.png")}
           />
         </div>
       </div>
@@ -40,15 +41,22 @@ const Header = () => {
         <Button label="Writer" color="#69E6A6" />
         <Button label="Reader" color="white" />
       </div>
+      <img
+        className="sponsors"
+        src={require("../../images/sponsors.png")}
+        alt="sponsors"
+      />
     </StyledHeader>
   );
 };
 
 export default Header;
 const StyledHeader = styled.header`
-  height: 100vh;
-  background: var(--bgcolor) url(${backImg}) no-repeat right top;
-  background-size: 8rem;
+  min-height: 100vh;
+  background: url(${backImg1}) left bottom no-repeat,
+    url(${backImg}) no-repeat right top;
+  background-size: 12rem, 12rem;
+  background-color: var(--bgcolor);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +70,6 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     text-align: center;
     padding: 2rem 0;
-
 
     &--title {
       font-size: 28px;
@@ -102,6 +109,11 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem 0 0;
+    margin: 2rem 0;
+  }
+
+  .sponsors {
+    width: 100%;
+    height: 3rem;
   }
 `;

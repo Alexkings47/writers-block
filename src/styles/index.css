@@ -21,3 +21,19 @@ button {
 ul {
   list-style-type: none;
 }
+/* typography */
+
+/* .sub-text-white */
+.section-heading {
+  margin-bottom: 1rem;
+  
+}
+.card-title {
+  font-size: 16px;
+  color: #2d0572e3;
+}
+
+.sub-text {
+  color: gray;
+  font-size: 13.5px;
+}

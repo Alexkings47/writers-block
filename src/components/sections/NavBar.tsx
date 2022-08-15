@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Button from "./Button";
+import Button from "../elements/Button";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="logo_div">
         <img
           className="logo"
-          src={require("../images/favicon.jpg")}
+          src={require("../../images/favicon.jpg")}
           alt="logo"
         />
         <p className="title">Writer's Block</p>

@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
+import Footer from "../components/sections/Footer";
+import Header from "../components/sections/Header";
+import Services from "../components/sections/Services";
 
 const Home = () => {
   return (
     <StyledMain>
       <Header />
+      <Services />
+      <Footer />
     </StyledMain>
   );
 };
