@@ -6,7 +6,7 @@
 }
 
 :root {
-  --blue: #ff4484;
+  --lightgreen: #13cf45;
   --bgcolor: #0a2640;
 }
 
@@ -26,7 +26,7 @@ ul {
 /* .sub-text-white */
 .section-heading {
   margin-bottom: 1rem;
-  
+
 }
 .card-title {
   font-size: 16px;
@@ -37,3 +37,15 @@ ul {
   color: gray;
   font-size: 13.5px;
 }
+
+.section-title {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 1rem;
+      font-family: "neucha";
+      text-shadow: 1px 1px 8px #f90d0d;
+    }
+  .section-desc {
+      font-size: 12px;
+      color: #f1f1f1dd;
+    }

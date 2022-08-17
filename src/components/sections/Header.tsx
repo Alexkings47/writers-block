@@ -65,7 +65,7 @@ const StyledHeader = styled.header`
   .header_text {
     max-width: 90%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
@@ -73,8 +73,10 @@ const StyledHeader = styled.header`
 
     &--title {
       font-size: 28px;
-      color: white;
+      color: #fff;
       margin-bottom: 1rem;
+      font-family: "neucha";
+      text-shadow: 2px 8px 8px #f90d6f;
     }
     &--desc {
       font-size: 12px;

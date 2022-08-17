@@ -28,7 +28,6 @@ const StyledDiv = styled.div`
   min-height: 22rem;
   max-width: 100%;
   /* text-align: left; */
-  padding: 0 1rem;
   position: relative;
 
   /* .card-text {

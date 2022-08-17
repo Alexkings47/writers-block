@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Button from "../elements/Button";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
@@ -23,7 +22,7 @@ const Navbar = () => {
       <button className="nav-menu-icon" onClick={showMenu}>
         <GiHamburgerMenu />
       </button>
-      <ul className="flexed-list">
+      <ul className={menu ? "flexed-list" : "hide-flexed-list"}>
         <li>About</li>
         <li>Blog</li>
         <li>Download</li>
@@ -45,6 +44,7 @@ const StyledNav = styled.nav`
   padding: 1rem;
   color: white;
   width: 100%;
+  margin-bottom: 5rem;
 
   .logo_div {
     display: flex;
@@ -52,8 +52,9 @@ const StyledNav = styled.nav`
   }
   .logo {
     width: 3rem;
-    height: 40px;
+    height: 3rem;
     margin-right: 10px;
+    border-radius: 50%;
   }
   .title {
     font-family: "neucha";
@@ -62,18 +63,28 @@ const StyledNav = styled.nav`
   }
   .nav-menu-icon {
     font-size: 20px;
-    
     color: white;
   }
+  .hide-flexed-list {
+   position: absolute;
+   top: -5rem;
+   left: 0;
+   transition: 1s;
+  }
   .flexed-list {
-    display: none;
-    list-style: none;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    flex: 0.9;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 13px;
+    text-align: left;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    margin-bottom: 5rem;
+    width: 50%;
+
+    li {
+      border-bottom: 1px solid #ffffff68;
+      padding: 10px 8px;
+    }
   }
   .button-div {
     display: none;
@@ -82,11 +93,8 @@ const StyledNav = styled.nav`
     align-items: center;
   }
 
- 
-  @media screen and (max-width: 1300px) {
-  }
   @media (max-width: 1100px) {
   }
-  @media (max-width: 600px) {
+  @media screen and (max-width: 1300px) {
   }
 `;

@@ -61,6 +61,7 @@ const StyledDiv = styled.section`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     row-gap: 2rem;
+    column-gap: 1rem;
     justify-items: center;
   }
   .service-text{
