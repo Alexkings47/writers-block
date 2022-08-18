@@ -38,6 +38,7 @@ const StyledDiv = styled.div`
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
+    color: #f90d6f;
   }
   img {
     max-width: 220px;

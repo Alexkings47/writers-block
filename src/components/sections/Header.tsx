@@ -38,7 +38,7 @@ const Header = () => {
         </div>
       </div>
       <div className="button-div">
-        <Button label="Writer" color="#69E6A6" />
+        <Button label="Writer" color="var(--lightgreen)" />
         <Button label="Reader" color="white" />
       </div>
       <img

@@ -21,7 +21,7 @@ const AuthorCard = () => {
             />
             <Button
               label={"Publish a Book"}
-              color={"green"}
+              color={"var(--lightgreen)"}
               chosenClass={"block-btn"}
             />
           </div>
@@ -54,25 +54,25 @@ const StyledDiv = styled.div`
       height: 8rem;
     }
   }
-  .section-desc {
-    /* text-align: left; */
+  .section-title {
+    color: #fff;
+   
+    text-shadow: 2px 8px 8px #f90d6f;
   }
   img {
     width: 100%;
   }
   .button-div {
     display: flex;
-   
+
     justify-content: center;
     align-items: center;
     * {
       margin-right: 2rem;
     }
 
-    .block-btn{
-        border-radius: 0;
-        background-color: transparent;
+    .block-btn {
+      border-radius: 0;
     }
   }
-  
 `;

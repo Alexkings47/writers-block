@@ -82,7 +82,7 @@ const StyledFooter = styled.footer`
   }
   .footer-icon {
     font-size: 3rem;
-    color: var(--pink);
+    color: var(--lightgreen);
   }
   .copyright {
     /* font-weight: 600; */

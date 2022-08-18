@@ -1,9 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
+import AuthorCard from '../cards/AuthorCard'
 
 const Featured = () => {
   return (
-    <div>Featured</div>
+    <StyledDiv>
+        <AuthorCard />
+    </StyledDiv>
   )
 }
 
 export default Featured
+const StyledDiv = styled.div`
+    
+`

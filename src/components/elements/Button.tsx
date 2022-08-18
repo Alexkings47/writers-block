@@ -24,9 +24,10 @@ const StyledButton = styled.button`
   font-family: "Manrope";
   font-weight: 700;
   background-color: ${(prop) => (prop.color === "white" ? "" : prop.color)};
-  color: ${(prop) => (prop.color === "white" ? "var(--lightgreen)" : "white")};
+  /* color: ${(prop) => (prop.color === "white" ? "var(--lightgreen)" : "white")}; */
+  color: white;
 
   &:focus {
-    background-color: orangered;
+    background-color: #f90d6f;
   }
 `;
