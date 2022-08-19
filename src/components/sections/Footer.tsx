@@ -51,6 +51,7 @@ const StyledFooter = styled.footer`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     justify-content: center;
+    border: 1px solid red;
     justify-items: center;
     column-gap: 1.2rem;
     row-gap: 1rem;
@@ -63,6 +64,7 @@ const StyledFooter = styled.footer`
     padding: 0 10px;
     text-align: left;
     width: 100%;
+    border: 1px solid red;
 
     li:first-child {
       font-weight: bold;

@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import backImg from "../../images/ellipse.png";
 import backImg1 from "../../images/ellipsedown.png";
 import Button from "../elements/Button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -38,8 +39,10 @@ const Header = () => {
         </div>
       </div>
       <div className="button-div">
+        <Link to="/readprofile">
+          <Button label="Reader" color="white" />
+        </Link>
         <Button label="Writer" color="var(--lightgreen)" />
-        <Button label="Reader" color="white" />
       </div>
       <img
         className="sponsors"

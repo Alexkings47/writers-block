@@ -5,6 +5,11 @@
   font-family: "Manrope", sans-serif;
 }
 
+button{
+  border: none;
+  background: none;
+}
+
 :root {
   --lightgreen: #16e5e2;
   --bgcolor: #0a2640;

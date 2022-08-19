@@ -31,7 +31,7 @@ const Navbar = () => {
   // }, [third])
   const toggleRef: (event: BaseSyntheticEvent) => void = (event) => {};
   return (
-    <StyledNav ref={windowref} onClick={toggleRef}>
+    <StyledNav ref={windowref} onClick={toggleRef} menu={menu}>
       <div className="nav-top">
         <div className="logo_div">
           <img
@@ -60,14 +60,14 @@ const Navbar = () => {
     </StyledNav>
   );
 };
-// <{ menu: any }>
+
 export default Navbar;
-const StyledNav = styled.nav`
+const StyledNav = styled.nav<{ menu: boolean }>`
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:flex-start;
   align-items: stretch;
 
   .nav-top {
@@ -77,6 +77,7 @@ const StyledNav = styled.nav`
     color: white;
     z-index: 10;
     padding: 1.5rem;
+    border: 1px solid red;
   }
 
   .logo_div {
@@ -99,23 +100,23 @@ const StyledNav = styled.nav`
     color: white;
   }
 
+  .flexed-list,
   .hide-flexed-list {
-    transform: translateY(-20rem);
-  }
-
-  .flexed-list {
     font-size: 13px;
     text-align: left;
-    background-color: var(--bgcolor);
+    background-color:white;
+    color: black;
     width: 100%;
-    transform: translateY(0);
-    transition: all 0.5s;
+    transform: translateX(0);
+    transition: all 1s;
     top: 5rem;
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
     width: 50%;
     z-index: 5;
     padding: 0 1.5rem;
     margin-top: 1rem;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
 
     li {
       background-image: linear-gradient(
@@ -134,7 +135,9 @@ const StyledNav = styled.nav`
       transition: all 0.5s;
     }
   }
-
+  .hide-flexed-list {
+    transform: translateX(-15rem);
+  }
   .button-div {
     display: none;
     margin-left: 1rem;
