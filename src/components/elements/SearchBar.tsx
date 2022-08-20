@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 
 type Props = {
-  buttonVal: string;
+  buttonVal?: string;
   chosenClass: string;
   inputVal: string;
 };
@@ -20,9 +20,10 @@ const SearchBar = ({ buttonVal, chosenClass, inputVal }: Props) => {
         ref={inputRef}
         value={search}
         onChange={(evt) => setSearch(evt.target.value)}
-        onFocus={()=> inputRef.current?.blur()}
+        onFocus={() => inputRef.current?.blur()}
+        style= {{width: buttonVal? "76%": "100%"}}
       />
-      <button className="searchbtn">{buttonVal}</button>
+      {buttonVal && <button className="searchbtn">{buttonVal}</button>}{" "}
     </StyledDiv>
   );
 };
@@ -33,13 +34,10 @@ const StyledDiv = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  max-width: 30rem;
   min-width: 20rem;
-  padding: 1rem;
 
   input {
     height: 2.5rem;
-    width: 76%;
     text-indent: 1rem;
     border: 1px solid #ebf3f7;
     border-top-left-radius: 3px;

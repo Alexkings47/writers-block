@@ -20,24 +20,30 @@ const Footer = () => {
             dicta!
           </p>
         </div>
+        <div className="footer-div">
         <ul className="footer-list">
           <li>Quick links</li>
           <li>For Companies</li>
           <li>For Talents</li>
           <li>Job Board</li>
         </ul>
+        </div>
+        <div className="footer-div">
         <ul className="footer-list">
           <li>Company</li>
           <li>About Us</li>
           <li>Blog</li>
           <li>Testimonials</li>
         </ul>
+        </div>
+        <div className="footer-div">
         <ul className="footer-list">
           <li>support</li>
           <li>Contact Us</li>
           <li>Help Center</li>
           <li>FAQs</li>
         </ul>
+        </div>
       </div>
       <small className="copyright">
         &copy;2022 — Talentco. All Rights Reserved.
@@ -49,9 +55,9 @@ export default Footer;
 const StyledFooter = styled.footer`
   .footer-top {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     justify-content: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-items: center;
     column-gap: 1.2rem;
     row-gap: 1rem;
@@ -61,10 +67,9 @@ const StyledFooter = styled.footer`
     text-align: left;
   }
   .footer-list {
-    padding: 0 10px;
+    
     text-align: left;
-    width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     li:first-child {
       font-weight: bold;
@@ -73,8 +78,11 @@ const StyledFooter = styled.footer`
     }
   }
   .footer-div {
-    padding: 0 10px;
+    padding: 10px 10px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
   .footer-logo {
     width: 3rem;

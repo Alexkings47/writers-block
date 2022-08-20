@@ -63,12 +63,12 @@ const Navbar = () => {
 
 export default Navbar;
 const StyledNav = styled.nav<{ menu: boolean }>`
-  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: stretch;
+  /* border: 1px solid red; */
 
   .nav-top {
     display: flex;
@@ -77,7 +77,6 @@ const StyledNav = styled.nav<{ menu: boolean }>`
     color: white;
     z-index: 10;
     padding: 1.5rem;
-    border: 1px solid red;
   }
 
   .logo_div {
@@ -104,7 +103,7 @@ const StyledNav = styled.nav<{ menu: boolean }>`
   .hide-flexed-list {
     font-size: 13px;
     text-align: left;
-    background-color:white;
+    background-color: white;
     color: black;
     width: 100%;
     transform: translateX(0);
@@ -115,8 +114,8 @@ const StyledNav = styled.nav<{ menu: boolean }>`
     z-index: 5;
     padding: 0 1.5rem;
     margin-top: 1rem;
-    border-bottom-left-radius:10px ;
-    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 
     li {
       background-image: linear-gradient(
