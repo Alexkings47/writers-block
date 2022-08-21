@@ -7,11 +7,22 @@ import { AiOutlineMessage, AiOutlineUser } from "react-icons/ai";
 import { BiLogOutCircle } from "react-icons/bi";
 import { RiAppsLine } from "react-icons/ri";
 import { FiMoreHorizontal } from "react-icons/fi";
+import {BsChevronRight} from "react-icons/bs"
 import bgImg from "../images/backimg.png";
 import SearchBar from "../components/elements/SearchBar";
 import BookCard from "../components/cards/BookCard";
+import LibraryCard from "../components/cards/LibraryCard";
+
+
 
 const ReadProfile: React.FC = () => {
+{/* <LibraryCard imgUrl="" title="" author="" /> */}
+
+const LibArr: JSX.Element[] = [];
+for(let i:number = 0; i <=5; i++){
+LibArr.push(<LibraryCard imgUrl="libraryCard" title="book1" author="Clinton" />);
+}
+console.log(LibArr)
   return (
     <StyledMain>
       <div className="dashboard">
@@ -66,16 +77,34 @@ const ReadProfile: React.FC = () => {
         </div>
         <div className="myBooks-middle">
           <div className="myBooks-middle-heading">
-            <span>Your Unnfinished Books </span>
+            <span>Your Unfinished Books </span>
             <FiMoreHorizontal />
           </div>
           <div className="myBooks-middle-main">
-            <BookCard  imgUrl="book1" title="book1"/>
-            <BookCard  imgUrl="book1" title="book1"/>
-            
+            <BookCard
+              imgUrl="storm"
+              title="The son of the storm"
+              author={"Alex"}
+              authorImg={"author"}
+            />
+            <BookCard
+              imgUrl="storm"
+              title="The son of the storm"
+              author={"Afogu"}
+              authorImg={"author"}
+            />
           </div>
         </div>
-        <div className="myBooks-bottom"></div>
+        <div className="myBooks-bottom">
+          <div className="myBooks-bottom-heading">
+            <span>Your Unfinished Books </span>
+            <FiMoreHorizontal />
+          </div>
+          <div className="myBooks-middle-main">
+            {LibArr}
+            <BsChevronRight />
+          </div>
+        </div>
       </div>
     </StyledMain>
   );
@@ -175,16 +204,19 @@ const StyledMain = styled.main`
     &-search {
       margin: 0;
       width: 80%;
-      
     }
-
+    &-bottom {
+      height: 10rem;
+    }
     &-top,
-    &-middle, 
+    &-middle,
     &-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      padding: 1.5rem 0 1rem;
+      flex-direction: column;
 
       .top-icons {
         width: 6rem;
@@ -200,6 +232,7 @@ const StyledMain = styled.main`
         align-items: center;
         width: 100%;
         height: 2rem;
+        padding: 0 0 1.5rem;
       }
       &-main {
         display: flex;
@@ -210,9 +243,10 @@ const StyledMain = styled.main`
       }
     }
     &-middle {
-      flex-direction: column;
       height: 70%;
     }
+     &-top{
+      flex-direction: row;
+     }
   }
- 
 `;
