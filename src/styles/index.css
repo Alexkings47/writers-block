@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "karla", sans-serif;
+}
+
+button{
+  border: none;
+  background: none;
+}
+
+:root {
+  --lightgreen: #16e5e2;
+  --bgcolor: #0a2640;
+}
+
+button {
+  border: none;
+  background: none;
+}
+.container {
+  max-width: 1440px;
+}
+
+ul {
+  list-style-type: none;
+}
+/* typography */
+
+/* .sub-text-white */
+.section-heading {
+  margin-bottom: 1rem;
+
+}
+.card-title {
+  font-size: 16px;
+  color: #2d0572e3;
+}
+
+.sub-text {
+  color: rgb(32, 31, 31);
+  font-size: 13.5px;
+}
+
+.section-title {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 1rem;
+      font-family: "neucha";
+      text-shadow: 1px 1px 8px #f90d0d;
+    }
+  .section-desc {
+      font-size: 12px;
+      color: #f1f1f1dd;
+    }
