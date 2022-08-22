@@ -5,6 +5,7 @@ type Props = {
   buttonVal?: string;
   chosenClass: string;
   inputVal: string;
+  myref?: HTMLElement;
 };
 
 const SearchBar = ({ buttonVal, chosenClass, inputVal }: Props) => {
@@ -17,11 +18,14 @@ const SearchBar = ({ buttonVal, chosenClass, inputVal }: Props) => {
     <StyledDiv id="search" className={`full-width ${chosenClass}`}>
       <input
         placeholder={inputVal}
-        ref={inputRef}
+        // ref={myref}
         value={search}
-        onChange={(evt) => setSearch(evt.target.value)}
-        onFocus={() => inputRef.current?.blur()}
-        style= {{width: buttonVal? "76%": "100%"}}
+        onChange={(evt) => {
+          setSearch(evt.target.value);
+          console.log(search);
+        }}
+       
+        style={{ width: buttonVal ? "76%" : "100%" }}
       />
       {buttonVal && <button className="searchbtn">{buttonVal}</button>}{" "}
     </StyledDiv>

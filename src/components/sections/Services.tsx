@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ServiceCard from "../cards/ServiceCard";
+import img1 from "../../images/pharoah.png";
+import img2 from "../../images/benin.png";
 
 const Services = () => {
   return (
@@ -55,17 +57,24 @@ const StyledDiv = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(#ffffffdf, #ffffffdf), url(${img1}) no-repeat,
+    url(${img2}) no-repeat;
+  background-size: 10rem, 10rem;
+  background-position: 50% top, 50% bottom;
+  width: 100%;
 
   .cards {
     padding: 2rem 1rem;
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     row-gap: 2rem;
     column-gap: 1rem;
     justify-items: center;
   }
-  .service-text{
+  .service-text {
     max-width: 88%;
-    
   }
+
+ 
 `;

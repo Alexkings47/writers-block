@@ -1,4 +1,4 @@
-import React from "react";
+import React,  {useRef} from "react";
 import styled from "styled-components";
 import AuthorCard from "../components/cards/AuthorCard";
 import SearchBar from "../components/elements/SearchBar";
@@ -7,6 +7,8 @@ import Header from "../components/sections/Header";
 import Services from "../components/sections/Services";
 
 const Home = () => {
+  // const myref = useRef<HTMLInputElement>(null);
+
   return (
     <StyledMain>
       <Header />
@@ -16,6 +18,7 @@ const Home = () => {
         buttonVal={"search"}
         chosenClass={"home-search"}
         inputVal={"author or article"}
+        // ref={myref}
       />
       <Footer />
     </StyledMain>

@@ -115,10 +115,10 @@ const StyledNav = styled.nav<{ menu: boolean }>`
     color: black;
     width: 100%;
     transform: translateX(0);
-    transition: all 1s;
+    transition: all .5s;
     top: 5rem;
-    /* margin-bottom: 5rem; */
     width: 50%;
+    height: 12rem;
     z-index: 5;
     margin-top: 1rem;
     border-bottom-left-radius: 10px;
@@ -143,6 +143,7 @@ const StyledNav = styled.nav<{ menu: boolean }>`
   }
   .hide-flexed-list {
     transform: translateX(-80rem);
+    height: 1rem;
   }
   .button-div {
     display: none;

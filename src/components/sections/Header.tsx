@@ -23,18 +23,18 @@ const Header = () => {
         <img
           className="header_image1"
           alt="header_image1"
-          src={require("../../images/headerimage1.png")}
+          src={require("../../images/nimasa.png")}
         />
         <div className="header_image-bottom">
           <img
             className="header_image2"
             alt="header_image2"
-            src={require("../../images/headerimage2.png")}
+            src={require("../../images/girl.jpg")}
           />
           <img
             className="header_image3"
             alt="header_image3"
-            src={require("../../images/headerimage3.png")}
+            src={require("../../images/amanda.jpg")}
           />
         </div>
       </div>
@@ -100,8 +100,19 @@ const StyledHeader = styled.header`
       align-content: center;
       justify-content: space-between;
     }
+
+    &1:hover,
+    &2:hover,
+    &3:hover {
+      transform: scale(1.05);
+      z-index: 20;
+      box-shadow: 0 2rem 4rem rgb(0 0 0 / 50%);
+      outline: 10px solid #55c57a;
+    }
     &1 {
       width: 100%;
+      height: 14rem;
+      object-fit: cover;
       margin-bottom: 1rem;
     }
     &2,

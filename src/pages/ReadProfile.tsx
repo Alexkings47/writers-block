@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/elements/Button";
@@ -7,21 +7,28 @@ import { AiOutlineMessage, AiOutlineUser } from "react-icons/ai";
 import { BiLogOutCircle } from "react-icons/bi";
 import { RiAppsLine } from "react-icons/ri";
 import { FiMoreHorizontal } from "react-icons/fi";
-import {BsChevronRight} from "react-icons/bs"
+import { BsChevronRight } from "react-icons/bs";
 import bgImg from "../images/backimg.png";
 import SearchBar from "../components/elements/SearchBar";
 import BookCard from "../components/cards/BookCard";
 import LibraryCard from "../components/cards/LibraryCard";
 
-
-
 const ReadProfile: React.FC = () => {
+  // const myref = useRef<HTMLInputElement>(null);
 
-const LibArr: JSX.Element[] = [];
-for(let i:number = 0; i <=5; i++){
-LibArr.push(<LibraryCard key= {i} imgUrl="libraryCard" title="book1" author="Clinton" />);
-}
-console.log(LibArr)
+
+  const LibArr: JSX.Element[] = [];
+  for (let i: number = 0; i <= 5; i++) {
+    LibArr.push(
+      <LibraryCard
+        key={i}
+        imgUrl="libraryCard"
+        title="book1"
+        author="Clinton"
+      />
+    );
+  }
+  console.log(LibArr);
   return (
     <StyledMain>
       <div className="dashboard">
@@ -64,7 +71,11 @@ console.log(LibArr)
       </div>
       <div className="myBooks">
         <div className="myBooks-top">
-          <SearchBar inputVal="search" chosenClass="myBooks-search" />
+          <SearchBar
+            inputVal="search"
+            // ref={myref}
+            chosenClass="myBooks-search"
+          />
           <div className="top-icons">
             <span className="icon">
               <AiOutlineUser />
@@ -250,8 +261,8 @@ const StyledMain = styled.main`
     &-middle {
       height: 70%;
     }
-     &-top{
+    &-top {
       flex-direction: row;
-     }
+    }
   }
 `;
