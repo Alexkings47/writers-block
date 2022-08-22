@@ -1,4 +1,4 @@
-import React,  {useRef} from "react";
+import React from "react";
 import styled from "styled-components";
 import AuthorCard from "../components/cards/AuthorCard";
 import SearchBar from "../components/elements/SearchBar";

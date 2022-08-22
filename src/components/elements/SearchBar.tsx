@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
 type Props = {
@@ -10,22 +10,29 @@ type Props = {
 
 const SearchBar = ({ buttonVal, chosenClass, inputVal }: Props) => {
   const [search, setSearch] = useState<string>("");
-
+  const [render, setrender] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {}, []);
 
   return (
-    <StyledDiv id="search" className={`full-width ${chosenClass}`}>
+    <StyledDiv
+      className={` ${chosenClass}`}
+      style={{
+        border:
+          document.activeElement === inputRef.current
+            ? "1px solid #2e90e5 "
+            : "",
+      }}
+    >
       <input
         placeholder={inputVal}
-        // ref={myref}
         value={search}
         onChange={(evt) => {
           setSearch(evt.target.value);
           console.log(search);
         }}
-       
+        ref={inputRef}
         style={{ width: buttonVal ? "76%" : "100%" }}
+        onFocus={()=>{setrender(!render)}}
       />
       {buttonVal && <button className="searchbtn">{buttonVal}</button>}{" "}
     </StyledDiv>
@@ -55,6 +62,10 @@ const StyledDiv = styled.div`
       font-weight: 500;
     }
   }
+  input:focus {
+    outline: none;
+  }
+
   .searchbtn {
     border: none;
     background-color: #2e90e5;

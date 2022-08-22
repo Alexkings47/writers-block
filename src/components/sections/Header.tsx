@@ -31,6 +31,11 @@ const Header = () => {
             alt="header_image2"
             src={require("../../images/girl.jpg")}
           />
+            <img
+              className="header_image4"
+              alt="header_image4"
+              src={require("../../images/storm.jpeg")}
+            />
           <img
             className="header_image3"
             alt="header_image3"
@@ -79,7 +84,7 @@ const StyledHeader = styled.header`
       color: #fff;
       margin-bottom: 1rem;
       font-family: "neucha";
-      text-shadow: 2px 8px 8px #f90d6f;
+      /* text-shadow: 2px 8px 8px #f90d6f; */
     }
     &--desc {
       font-size: 12px;
@@ -88,7 +93,7 @@ const StyledHeader = styled.header`
   }
 
   .header_image {
-    max-width: 70%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,6 +124,9 @@ const StyledHeader = styled.header`
     &3 {
       width: 45%;
     }
+    &4 {
+      display: none;
+    }
   }
   .button-div {
     width: 12rem;
@@ -131,5 +139,19 @@ const StyledHeader = styled.header`
   .sponsors {
     width: 100%;
     height: 3rem;
+  }
+
+  @media (min-width: 1000px) {
+    .header_image {
+      width: 40%;
+
+      &2,
+      &3,
+      &4 {
+        width: auto;
+        height: 14rem;
+        display: inline-block;
+      }
+    }
   }
 `;

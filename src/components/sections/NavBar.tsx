@@ -94,7 +94,6 @@ const StyledNav = styled.nav<{ menu: boolean }>`
   .logo {
     width: 5rem;
     height: 5rem;
-    margin-right: 10px;
     border-radius: 50%;
   }
   .title {
