@@ -53,6 +53,7 @@ const Footer = () => {
 };
 export default Footer;
 const StyledFooter = styled.footer`
+margin-top: 2rem;
   .footer-top {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));

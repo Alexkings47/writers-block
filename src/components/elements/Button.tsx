@@ -17,7 +17,7 @@ export default Button;
 const StyledButton = styled.button`
   border-radius: 10px;
   min-width: 5rem;
-  padding: 4px 3px;
+  padding: 6px 4px;
   text-align: center;
   min-height: 1.5rem;
   border: 2px solid ${(props) => props.color};

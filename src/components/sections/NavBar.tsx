@@ -1,47 +1,53 @@
-import React, {
-  useState,
-  useRef,
-  useEffect,
-  SyntheticEvent,
-  BaseSyntheticEvent,
-} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-// type Props = {
-//   menu: boolean;
-// };
-
 const Navbar = () => {
   const [menu, setMenu] = useState<boolean>(false);
-  /* display: ${(props) => (props.menu ? "flex" : "none")} */
 
-  const toggleMenu: () => void = () => {
-    setMenu(!menu);
-  };
-  const menuToggle = useRef(null);
-  const windowref = useRef(null);
+  const menuToggle = useRef<HTMLUListElement>(null);
 
-  // useEffect(() => {
-  //   .onclick
+  useEffect(() => {
+    const toggleMenu: { (event: MouseEvent): void } = (evt: Event) => {
+      const target = evt.target as HTMLElement;
+      if (
+        target === menuToggle.current ||
+        menuToggle.current?.contains(target)
+      ) {
+        console.log("second");
+        return;
+      } else {
+        setMenu(!menu);
+        console.log("first");
+      }
+    };
+    // console.log({ menu });
+    if (menu && !(typeof window.onclick)) {
+      window.addEventListener("click", toggleMenu);
+      // console.log(window.onclick);
+    }
 
-  //   return () => {
-  //     second
-  //   }
-  // }, [third])
-  const toggleRef: (event: BaseSyntheticEvent) => void = (event) => {};
+    return () => {
+      window.removeEventListener("click", toggleMenu);
+    };
+  }, [menu]);
   return (
-    <StyledNav ref={windowref} onClick={toggleRef} menu={menu}>
+    <StyledNav menu={menu}>
       <div className="nav-top">
         <div className="logo_div">
           <img
             className="logo"
-            src={require("../../images/favicon.jpg")}
+            src={require("../../images/favicon.png")}
             alt="logo"
           />
           <p className="title">Writer's Block</p>
         </div>
-        <button className="nav-menu-icon" onClick={toggleMenu}>
+        <button
+          className="nav-menu-icon"
+          onClick={() => {
+            setMenu(!menu);
+          }}
+        >
           <GiHamburgerMenu />
         </button>
       </div>
@@ -52,6 +58,8 @@ const Navbar = () => {
         <li>About</li>
         <li>Blog</li>
         <li>Download</li>
+        <li>Login</li>
+        <li>Sign up</li>
       </ul>
       {/* <div className="button-div">
         <Button label={"login"} color={"white"} />
@@ -84,8 +92,8 @@ const StyledNav = styled.nav<{ menu: boolean }>`
     align-items: center;
   }
   .logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 5rem;
+    height: 5rem;
     margin-right: 10px;
     border-radius: 50%;
   }
@@ -112,7 +120,6 @@ const StyledNav = styled.nav<{ menu: boolean }>`
     /* margin-bottom: 5rem; */
     width: 50%;
     z-index: 5;
-    padding: 0 1.5rem;
     margin-top: 1rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -126,7 +133,7 @@ const StyledNav = styled.nav<{ menu: boolean }>`
       );
       transition: all 0.5s;
       border-bottom: 1px solid #ffffff68;
-      padding: 10px 8px;
+      padding: 10px 1.5rem;
       background-size: 240%;
     }
     li:hover {
@@ -135,7 +142,7 @@ const StyledNav = styled.nav<{ menu: boolean }>`
     }
   }
   .hide-flexed-list {
-    transform: translateX(-15rem);
+    transform: translateX(-80rem);
   }
   .button-div {
     display: none;

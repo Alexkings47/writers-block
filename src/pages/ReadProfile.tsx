@@ -16,11 +16,10 @@ import LibraryCard from "../components/cards/LibraryCard";
 
 
 const ReadProfile: React.FC = () => {
-{/* <LibraryCard imgUrl="" title="" author="" /> */}
 
 const LibArr: JSX.Element[] = [];
 for(let i:number = 0; i <=5; i++){
-LibArr.push(<LibraryCard imgUrl="libraryCard" title="book1" author="Clinton" />);
+LibArr.push(<LibraryCard key= {i} imgUrl="libraryCard" title="book1" author="Clinton" />);
 }
 console.log(LibArr)
   return (
@@ -30,7 +29,7 @@ console.log(LibArr)
           <Link to="/">
             <img
               className="logo"
-              src={require("../images/favicon.jpg")}
+              src={require("../images/favicon.png")}
               alt="logo"
             />
           </Link>
@@ -101,7 +100,13 @@ console.log(LibArr)
             <FiMoreHorizontal />
           </div>
           <div className="myBooks-middle-main">
-            {LibArr}
+            {/* {LibArr} */}
+            <BookCard
+              authorImg={"author"}
+              imgUrl="libraryCard"
+              title="book1"
+              author="Clinton"
+            />
             <BsChevronRight />
           </div>
         </div>
@@ -178,8 +183,8 @@ const StyledMain = styled.main`
     align-items: center;
 
     .logo {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 5rem;
+      height: 5rem;
       margin-right: 10px;
       border-radius: 50%;
     }
