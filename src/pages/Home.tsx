@@ -5,12 +5,16 @@ import SearchBar from "../components/elements/SearchBar";
 import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
 import Services from "../components/sections/Services";
+import NavBar from "../components/sections/NavBar";
+
 
 const Home = () => {
   // const myref = useRef<HTMLInputElement>(null);
+  
 
   return (
     <StyledMain>
+      <NavBar />
       <Header />
       <Services />
       <AuthorCard />

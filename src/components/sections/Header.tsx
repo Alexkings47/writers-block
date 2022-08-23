@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import NavBar from "./NavBar";
-import backImg from "../../images/ellipse.png";
 import backImg1 from "../../images/ellipsedown.png";
 import Button from "../elements/Button";
 import { Link } from "react-router-dom";
@@ -9,7 +7,6 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <StyledHeader>
-      <NavBar />
       <div className="header_text">
         <h2 className="header_text--title">
           Art of the pen at it's mightiest on the writers' block
@@ -31,11 +28,11 @@ const Header = () => {
             alt="header_image2"
             src={require("../../images/girl.jpg")}
           />
-            <img
-              className="header_image4"
-              alt="header_image4"
-              src={require("../../images/storm.jpeg")}
-            />
+          <img
+            className="header_image4"
+            alt="header_image4"
+            src={require("../../images/storm.jpeg")}
+          />
           <img
             className="header_image3"
             alt="header_image3"
@@ -61,8 +58,8 @@ const Header = () => {
 export default Header;
 const StyledHeader = styled.header`
   min-height: 100vh;
-  background: url(${backImg1}) left bottom no-repeat,
-    url(${backImg}) no-repeat right top;
+  background: url(${backImg1}) left bottom no-repeat
+  ;
   background-size: 12rem, 12rem;
   background-color: var(--bgcolor);
   display: flex;
@@ -108,7 +105,8 @@ const StyledHeader = styled.header`
 
     &1:hover,
     &2:hover,
-    &3:hover {
+    &3:hover,
+    &4:hover {
       transform: scale(1.05);
       z-index: 20;
       box-shadow: 0 2rem 4rem rgb(0 0 0 / 50%);
@@ -144,6 +142,10 @@ const StyledHeader = styled.header`
   @media (min-width: 1000px) {
     .header_image {
       width: 40%;
+
+      &1 {
+        height: 20rem;
+      }
 
       &2,
       &3,

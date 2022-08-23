@@ -9,7 +9,7 @@ import bgImg from "../../images/backimg.png";
 
 const Dashboard = () => {
   return (
-    <StyledDiv>
+    <StyledDiv className="dashboard">
       <div className="logo_div">
         <Link to="/">
           <img
@@ -66,13 +66,20 @@ const StyledDiv = styled.div`
   .dashboard {
     &-details {
       text-align: left;
+      z-index: 10;
 
       li {
-        margin-bottom: 2rem;
-
+        padding: 1rem;
+        border-radius: 15px;
+        
         span {
           margin-left: 1rem;
         }
+      }
+      li:hover {
+        color: #fb6d3a;
+        background-color: white;
+        width: 21rem;
       }
     }
     &-support {
@@ -112,7 +119,6 @@ const StyledDiv = styled.div`
   .logo_div {
     display: flex;
     align-items: center;
-    
 
     .logo {
       width: 4rem;

@@ -20,5 +20,7 @@ const StyledMain = styled.main`
   padding: 1rem;
   justify-content: space-between;
 
- 
+ @media (max-width: 1000px) {
+  
+ }
 `;

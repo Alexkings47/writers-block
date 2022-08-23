@@ -89,7 +89,7 @@ const StyledFooter = styled.footer`
 
   .copyright {
     font-weight: 600;
-    margin-top: 5rem;
+    padding: 5rem 0 1rem;
     color: gray;
   }
 `;

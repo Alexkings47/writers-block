@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
+import backImg from "../../images/ellipse.png";
 
 const Navbar = () => {
   const [menu, setMenu] = useState<boolean>(false);
@@ -14,17 +15,14 @@ const Navbar = () => {
         target === menuToggle.current ||
         menuToggle.current?.contains(target)
       ) {
-        console.log("second");
         return;
       } else {
-        setMenu(!menu);
-        console.log("first");
+        // setMenu(!menu);
       }
     };
-    // console.log({ menu });
-    if (menu && !(typeof window.onclick)) {
+
+    if (menu) {
       window.addEventListener("click", toggleMenu);
-      // console.log(window.onclick);
     }
 
     return () => {
@@ -76,6 +74,13 @@ const StyledNav = styled.nav<{ menu: boolean }>`
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  position: sticky;
+  background: url(${backImg}) no-repeat right top;
+  background-size: 12rem;
+  background-color: var(--bgcolor);
+  left: 0;
+  top: 0;
+  z-index: 100;
   /* border: 1px solid red; */
 
   .nav-top {
@@ -84,7 +89,7 @@ const StyledNav = styled.nav<{ menu: boolean }>`
     align-items: center;
     color: white;
     z-index: 10;
-    padding: 1.5rem;
+    padding: 10px 1rem;
   }
 
   .logo_div {
@@ -114,12 +119,11 @@ const StyledNav = styled.nav<{ menu: boolean }>`
     color: black;
     width: 100%;
     transform: translateX(0);
-    transition: all .5s;
+    transition: all 0.5s;
     top: 5rem;
-    width: 50%;
+    width: 20rem;
     height: 12rem;
     z-index: 5;
-    margin-top: 1rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
@@ -142,7 +146,7 @@ const StyledNav = styled.nav<{ menu: boolean }>`
   }
   .hide-flexed-list {
     transform: translateX(-80rem);
-    height: 1rem;
+    height: 1px;
   }
   .button-div {
     display: none;
