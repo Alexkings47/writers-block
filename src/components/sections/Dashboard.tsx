@@ -57,7 +57,7 @@ const StyledDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 4rem;
+  padding: 2rem;
   width: 25%;
 
   /* * {

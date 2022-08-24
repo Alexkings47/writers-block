@@ -12,10 +12,9 @@ const LibraryCard = ({ imgUrl, title  }: Props) => {
     <StyledDiv>
       <img
         src={require(`../../images/${imgUrl}`)}
-        className="bookImg"
         alt={title}
+        className="cardImg"
       />
-     
     </StyledDiv>
   );
 };
@@ -27,18 +26,20 @@ const StyledDiv = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
-  position: relative;
-  width: 7rem;
-  overflow: hidden;
+  /* position: relative; */
+  width: 15rem;
+  /* border: 1px solid red; */
+  /* overflow: hidden; */
   height: 100%;
+  margin: 0 10px;
 
-  .bookImg {
+  .cardImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
+    left: 0; */
     filter: brightness(60%);
   }
   .bookImg:hover {

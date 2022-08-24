@@ -10,7 +10,7 @@ import LibraryCard from "../../components/cards/LibraryCard";
 
 const MyBooks = () => {
   const LibArr: JSX.Element[] = [];
-  for (let i: number = 0; i <= 5; i++) {
+  for (let i: number = 0; i <= 10; i++) {
     LibArr.push(
       <LibraryCard key={i} imgUrl="amanda.jpg" title="book1" author="Clinton" />
     );
@@ -140,16 +140,17 @@ const StyledDiv = styled.div`
     }
   }
   .bottom-cards {
-    width: 90%;
+    width: 93%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow-x: scroll;
+    border: 1px solid red;
   }
   .more-btn {
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     background-color: #f6f6f5;
     border-radius: 4px;
   }

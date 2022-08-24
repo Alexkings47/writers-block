@@ -11,7 +11,7 @@ type Props = {
 
 const BookCard = ({ imgUrl, title, author, authorImg, pages }: Props) => {
   return (
-    <StyledDiv imgUrl={imgUrl}>
+    <StyledDiv >
       <img
         className="bookImg"
         src={require(`../../images/${imgUrl}`)}
@@ -29,7 +29,7 @@ const BookCard = ({ imgUrl, title, author, authorImg, pages }: Props) => {
 };
 
 export default BookCard;
-const StyledDiv = styled.div<{ imgUrl: string }>`
+const StyledDiv = styled.div`
   width: 40%;
   position: relative;
   display: flex;
