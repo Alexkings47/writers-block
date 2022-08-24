@@ -41,7 +41,7 @@ const StyledDiv = styled.div`
     left: 0;
     filter: brightness(60%);
   }
-  .bookImg:hover {
+  .cardImg:hover {
     filter: brightness(100%);
     transform: scale(1.01);
   }

@@ -57,7 +57,7 @@ const MyBooks = () => {
       </div>
       <div className="myBooks-bottom">
         <div className="myBooks-bottom-heading">
-          <span>Your Unfinished Books </span>
+          <span>Your Library</span>
           <FiMoreHorizontal />
         </div>
         <div className="myBooks-bottom-main">
