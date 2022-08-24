@@ -146,12 +146,33 @@ const StyledDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     overflow-x: scroll;
-    border: 1px solid red;
   }
   .more-btn {
     width: 50px;
     height: 50px;
     background-color: #f6f6f5;
     border-radius: 4px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 2rem 1.8rem;
+    width: 72%;
+  }
+  @media (max-width: 700px) {
+    padding: 2rem 1.5rem;
+    width: 95%;
+    margin-left: auto;
+  }
+  @media (max-width: 500px) {
+    .myBooks-middle-main {
+      overflow-x: scroll;
+    }
+   
+    .myBooks {
+      &-search {
+        margin: 0;
+        width: 70%;
+      }
+    }
   }
 `;

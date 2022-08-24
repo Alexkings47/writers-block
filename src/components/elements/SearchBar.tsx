@@ -45,12 +45,12 @@ const StyledDiv = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  min-width: 20rem;
+  min-width: 10rem;
 
   input {
     height: 2.5rem;
     text-indent: 1rem;
-    border: 1px solid #ebf3f7;
+    border: 1px solid #555b5e;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     font-size: 14px;

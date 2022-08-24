@@ -11,19 +11,17 @@ type Props = {
 
 const BookCard = ({ imgUrl, title, author, authorImg, pages }: Props) => {
   return (
-    <StyledDiv >
+    <StyledDiv>
       <img
         className="bookImg"
         src={require(`../../images/${imgUrl}`)}
         alt={title}
       />
-      <div className="book-top">
-        <div className="author-div">
-          <img src={require(`../../images/${authorImg}`)} alt={"author"} />
-          <small>{author}</small>
-        </div>
-        <div className="pages"> {pages}</div>
+      <div className="author-div">
+        <img src={require(`../../images/${authorImg}`)} alt={"author"} />
+        <small>{author}</small>
       </div>
+      <div className="pages"> {pages}</div>
     </StyledDiv>
   );
 };
@@ -34,8 +32,8 @@ const StyledDiv = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 2rem;
+  align-items: center;
+  padding: 1rem;
   height: 18rem;
   overflow: hidden;
   border-radius: 15px;
@@ -58,12 +56,6 @@ const StyledDiv = styled.div`
     filter: brightness(100%);
     transform: scale(1.01);
   }
-  .book-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
 
   .pages {
     border-radius: 10px;
@@ -76,6 +68,17 @@ const StyledDiv = styled.div`
   .author-div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: 850px) {
+    padding: 5px;
+    width: 45%;
+    min-width: 12rem;
+    margin-right: 1.5rem;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
     align-items: center;
   }
 `;

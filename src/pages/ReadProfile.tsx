@@ -17,6 +17,7 @@ const StyledMain = styled.main`
   background: #503e9d;
   height: 100vh;
   display: flex;
+  position: relative;
   padding: 1rem;
   justify-content: space-between;
 

@@ -26,20 +26,19 @@ const StyledDiv = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
-  /* position: relative; */
-  width: 15rem;
-  /* border: 1px solid red; */
+  position: relative;
+  min-width: 10rem;
   /* overflow: hidden; */
-  height: 100%;
+  height: 90%;
   margin: 0 10px;
 
   .cardImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* position: absolute;
+    position: absolute;
     top: 0;
-    left: 0; */
+    left: 0;
     filter: brightness(60%);
   }
   .bookImg:hover {
