@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Button from "../../components/elements/Button";
 import { IoSettingsSharp, IoStatsChartOutline } from "react-icons/io5";
@@ -6,11 +6,18 @@ import { Link } from "react-router-dom";
 import { AiOutlineMessage } from "react-icons/ai";
 import { RiAppsLine } from "react-icons/ri";
 import bgImg from "../../images/backimg.png";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 
-const Dashboard = () => {
-  const [menu, setMenu] = useState<boolean>(false);
 
+type Props = {
+  menu: boolean;
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Dashboard = ({ menu, setMenu }:Props) => {
+
+
+  
   return (
     <StyledDiv className="dashboard" menu={menu}>
       <div className="logo_div">
@@ -28,7 +35,7 @@ const Dashboard = () => {
             setMenu(!menu);
           }}
         >
-          <GiHamburgerMenu />
+          <AiOutlineClose />
         </button>
       </div>
       <ul className="dashboard-details">
@@ -148,6 +155,7 @@ const StyledDiv = styled.div<{ menu: boolean }>`
       display: none;
       margin-left: 1rem;
       transition: all 0.5s;
+      
     }
   }
 
@@ -164,13 +172,13 @@ const StyledDiv = styled.div<{ menu: boolean }>`
     top: 0;
     left: 0;
     z-index: 100;
-    width: ${(props) => (props.menu ? "45%" : "5%")};
+    width: ${(props) => (props.menu ? "45%" : "0%")};
     padding: 2rem 10px 2rem 1rem;
     align-items: center;
 
     transform: translateX(-12rem);
     transform: ${(props) =>
-      props.menu ? "translateX(0)" : "translateX(-12rem)"};
+      props.menu ? "translateX(0)" : "translateX(-15rem)"};
 
     .logo_div {
       margin-top: 2rem;
@@ -180,17 +188,9 @@ const StyledDiv = styled.div<{ menu: boolean }>`
       }
       .dashboard-icon {
         display: inline-block;
-        margin-left: ${(props) => (props.menu ? "1rem" : "19rem")};
-        margin-right: 1rem;
+        margin-left: 1rem;
       }
     }
   }
-  @media (max-width: 500px) {
-    .logo_div {
-      .dashboard-icon {
-        margin-left: ${(props) => (props.menu ? "5px" : "19rem")};
-        margin-right: 1rem;
-      }
-    }
-  }
+  /* @media (max-width: 500px) { */
 `;

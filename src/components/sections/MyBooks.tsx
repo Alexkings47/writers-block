@@ -3,12 +3,16 @@ import styled from "styled-components";
 import { AiOutlineUser } from "react-icons/ai";
 import { BiLogOutCircle } from "react-icons/bi";
 import { FiMoreHorizontal } from "react-icons/fi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { BsChevronRight } from "react-icons/bs";
 import SearchBar from "../../components/elements/SearchBar";
 import BookCard from "../../components/cards/BookCard";
 import LibraryCard from "../../components/cards/LibraryCard";
 
-const MyBooks = () => {
+const MyBooks: React.FC<{
+  menu: boolean;
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ menu, setMenu }) => {
   const LibArr: JSX.Element[] = [];
   for (let i: number = 0; i <= 10; i++) {
     LibArr.push(
@@ -30,6 +34,14 @@ const MyBooks = () => {
           </span>
           <span className="icon-orange">
             <BiLogOutCircle />
+          </span>
+          <span
+            className="menu-close-icon"
+            onClick={() => {
+              setMenu(!menu);
+            }}
+          >
+            <GiHamburgerMenu />
           </span>
         </div>
       </div>
@@ -82,8 +94,29 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 2.5rem 3rem;
+  padding: 2rem 3rem;
   flex-direction: column;
+  margin: 0 auto;
+
+  .icon-orange {
+    color: #fb6d3a;
+    font-size: 20px;
+  }
+  .top-icons > * {
+    font-size: 20px;
+    margin-right: 1rem;
+    color: #5543a5c0;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #fb6d3a;
+    }
+  }
+
+  .menu-close-icon {
+    display: none;
+    margin-right: 0;
+  }
 
   .myBooks {
     &-search {
@@ -102,14 +135,6 @@ const StyledDiv = styled.div`
       width: 100%;
       flex-direction: column;
 
-      .top-icons {
-        width: 6rem;
-
-        span {
-          margin-left: 1rem;
-          font-size: 20px;
-        }
-      }
       &-heading {
         display: flex;
         justify-content: space-between;
@@ -146,6 +171,7 @@ const StyledDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     overflow-x: scroll;
+    box-shadow: 5px 0 10px inset #000;
   }
   .more-btn {
     width: 50px;
@@ -160,19 +186,26 @@ const StyledDiv = styled.div`
   }
   @media (max-width: 700px) {
     padding: 2rem 1.5rem;
-    width: 95%;
+    width: 97%;
     margin-left: auto;
-  }
-  @media (max-width: 500px) {
-    .myBooks-middle-main {
-      overflow-x: scroll;
+
+    .menu-close-icon {
+      display: inline-block;
     }
-   
     .myBooks {
       &-search {
         margin: 0;
         width: 70%;
       }
+    }
+  }
+  @media (max-width: 500px) {
+    padding: 2rem 1rem;
+    .myBooks-middle-main {
+      overflow-x: scroll;
+    }
+    .top-icons > * {
+      margin-right: 8px;
     }
   }
 `;

@@ -27,9 +27,9 @@ const StyledDiv = styled.div`
   align-items: center;
   color: white;
   position: relative;
-  min-width: 10rem;
+  min-width: 9rem;
   /* overflow: hidden; */
-  height: 90%;
+  height: 100%;
   margin: 0 10px;
 
   .cardImg {
