@@ -63,7 +63,6 @@ const StyledFooter = styled.footer`
     text-align: left;
   }
 
- 
   .footer-list {
     text-align: left;
 
@@ -91,5 +90,14 @@ const StyledFooter = styled.footer`
     font-weight: 600;
     padding: 5rem 0 1rem;
     color: gray;
+  }
+
+  @media (max-width: 500px) {
+    .footer-div {
+      justify-content: flex-start;
+    }
+    .footer-top {
+      margin-bottom: 16rem;
+    }
   }
 `;

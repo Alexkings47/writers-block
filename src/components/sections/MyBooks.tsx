@@ -36,7 +36,7 @@ const MyBooks: React.FC<{
             <BiLogOutCircle />
           </span>
           <span
-            className="menu-close-icon"
+            className={`${menu ? "hide-btn" : "menu-close-icon"}`}
             onClick={() => {
               setMenu(!menu);
             }}
@@ -97,6 +97,10 @@ const StyledDiv = styled.div`
   padding: 2rem 3rem;
   flex-direction: column;
   margin: 0 auto;
+
+  .hide-btn {
+    display: none;
+  }
 
   .icon-orange {
     color: #fb6d3a;

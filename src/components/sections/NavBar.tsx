@@ -76,12 +76,11 @@ const StyledNav = styled.nav<{ menu: boolean }>`
   align-items: stretch;
   position: sticky;
   background: url(${backImg}) no-repeat right top;
-  background-size: 12rem;
+  background-size: 8rem;
   background-color: var(--bgcolor);
   left: 0;
   top: 0;
   z-index: 100;
-  /* border: 1px solid red; */
 
   .nav-top {
     display: flex;
